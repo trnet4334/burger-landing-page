@@ -1,0 +1,145 @@
+{
+  "burgerAndSandwiches": {
+    "category": "BURGER & SANDWICHES",
+    "items": [
+      {
+        "name": "Add fries or salad",
+        "detail": "",
+        "price": 3.5
+      },
+      {
+        "name": "A's burger",
+        "detail": "Lettuce, Tomato, Pickles, American Caramelized, Onion, Fry Sauce",
+        "price": 9
+      },
+      {
+        "name": "A's burger for vegan",
+        "detail": "Lettuce, Tomatoes, Pickle, Chedder, Fry Sauce",
+        "price": 11
+      },
+      {
+        "name": "Fried chicken sandwich",
+        "detail": "Lettuce, Tomato, Pickles, Kewpie Mayo with Nashville Hot Spice Blend",
+        "price": 10
+      },
+      {
+        "name": "Pork belly burger",
+        "detail": "Hoisin Glazed Pork Belly and Burger Patty, Gochujang Aioli, Fried Shallots, Cabbage, Cilantro",
+        "price": 11
+      },
+      {
+        "name": "Beer battered fish poboy",
+        "detail": "Beer Battered Cod, Lettuce, Tomato, Cajun Remoulade, Pickles",
+        "price": 10
+      },
+      {
+        "name": "Bbq pork banh mi",
+        "detail": "Honey Soy Glazes Pork Shoulder, Cucumber, Pickled Daikon, Pickled Carrots, Cilantro, Fresh Jalapeno, Kewpie Mayo",
+        "price": 9
+      },
+      {
+        "name": "Bbq steak banh mi",
+        "detail": "Shallot Peppered Sirloin, Cucumber, Pickled Daikon, Pickled Carrots, Cilantro, Fresh Jalapeno, Kewpie Mayo",
+        "price": 10
+      },
+      {
+        "name": "Pork belly banh mi",
+        "detail": "Hoisin Sambal Glazed Belly, Cucumber, Pickled Daikon, Pickled Carrots, Cilantro, Fresh Jalapeno, Kewpie Mayo",
+        "price": 11
+      },
+      {
+        "name": "Pulled pork banh mi for vegan",
+        "detail": "Hoisin Sambal Glazed Jackfruit, Fried Shallots, Cucumber, Pickled Daikon, Pickled Carrots, Cilantro, Fresh Jalapeno, Kewpie Mayo"
+      }
+    ],
+    "special": "*Thoroughly cooking foods of animal origin such as beef, eggs, fish, lamb, milk, poultry, or shelifish reduces the risk of foodborne illness. Individuals with certain health conditions may be at a higher risk if these foods are consumed raw or undercooked."
+  },
+  "snacks": {
+    "category": "SNACKS",
+    "items": [
+      {
+        "name": "French fries (GF)",
+        "detail": "Served with Fry Sauce",
+        "price": 5
+      },
+      {
+        "name": "Beer brined jumbo wings (6 or 12) (GF)",
+        "detail": "<b>Choose from:<b> Buffalo, Honey Garlic BBQ, Hoisin Sambal, or Gochujang Honey. Served with Celery & Buttermilk Ranch or Blue Cheese",
+        "price": "12/19"
+      },
+      {
+        "name": "Crispy cauliflower",
+        "detail": "<b>Choose from:<b> Buffalo, Honey Garlic BBQ, Hoisin Sambal, Gochujang Honey, Buttermilk Ranch, or Blue Cheese.",
+        "price": 9
+      },
+      {
+        "name": "Elote salsa & chips",
+        "detail": "Roasted Sweet Corn, Pico de Gallo, Cilantro Lime Crema, Tajin, Cotija Cheese",
+        "price": 7
+      },
+      {
+        "name": "Baja fish tacos (2)",
+        "detail": "Beer Battered Cod, Cabbage, Pico de Gallo, Guacamole, Cilantro Lime Crema",
+        "price": 7
+      },
+      {
+        "name": "Tj dog",
+        "detail": "Bacon Wrapped All Beef Dog, Grilled Fajitas, Cilantro Lime Crema, Cotija Cheese",
+        "price": 5
+      },
+      {
+        "name": "Garbage nachos",
+        "detail": "Pork Belly & Chicken with a House Cheese Blend, Pico De Gallo, Guacamole, Cilantro Lime Crema",
+        "price": 12
+      }
+    ],
+    "special": "(GF) = Gluten Free"
+  },
+  "salads": {
+    "category": "SALADS",
+    "items": [
+      {
+        "name": "Mixed greens for vegan",
+        "detail": "Carrots, Tomatoes, Cucumber, Croutons & Choice of: Citrus Vinaigrette, Ranch, or Blue Cheese Dressing",
+        "price": 9
+      },
+      {
+        "name": "A's cobb",
+        "detail": "Romaine, Carrots, Tomatoes, Cucumber, Egg, Bacon, Blue Cheese",
+        "price": 10
+      },
+      {
+        "name": "Caesar",
+        "detail": "Romaine, Shaved Parmesan, Croutons",
+        "price": 9
+      },
+      {
+        "name": "Add protein",
+        "detail": "Grilled Chipotle Chicken - 4\nPeppered Sirloin Steak - 5\nPork Belly - 5",
+        "price": ""
+      }
+    ],
+    "special": "(GF) = Gluten Free"
+  },
+  "miniMe": {
+    "category": "MINI ME",
+    "items": [
+      {
+        "name": "Mini burger w/ fries",
+        "detail": "Meat, Cheese, Potato Roll",
+        "price": 9
+      },
+      {
+        "name": "Grilled cheese w/ fries",
+        "detail": "American & cheddar",
+        "price": 8
+      },
+      {
+        "name": "Mac & cheese",
+        "detail": "",
+        "price": 6
+      }
+    ],
+    "special": "*No Modifications Please"
+  }
+}
