@@ -1,5 +1,5 @@
 {
-  "burgerAndSandwiches": {
+  "burger": {
     "category": "BURGER & SANDWICHES",
     "items": [
       {
@@ -49,10 +49,11 @@
       },
       {
         "name": "Pulled pork banh mi for vegan",
-        "detail": "Hoisin Sambal Glazed Jackfruit, Fried Shallots, Cucumber, Pickled Daikon, Pickled Carrots, Cilantro, Fresh Jalapeno, Kewpie Mayo"
+        "detail": "Hoisin Sambal Glazed Jackfruit, Fried Shallots, Cucumber, Pickled Daikon, Pickled Carrots, Cilantro, Fresh Jalapeno, Kewpie Mayo",
+        "price": 10
       }
     ],
-    "special": "*Thoroughly cooking foods of animal origin such as beef, eggs, fish, lamb, milk, poultry, or shelifish reduces the risk of foodborne illness. Individuals with certain health conditions may be at a higher risk if these foods are consumed raw or undercooked."
+    "special": "* Thoroughly cooking foods of animal origin such as beef, eggs, fish, lamb, milk, poultry, or shelifish reduces the risk of foodborne illness. Individuals with certain health conditions may be at a higher risk if these foods are consumed raw or undercooked."
   },
   "snacks": {
     "category": "SNACKS",
@@ -64,12 +65,12 @@
       },
       {
         "name": "Beer brined jumbo wings (6 or 12) (GF)",
-        "detail": "<b>Choose from:<b> Buffalo, Honey Garlic BBQ, Hoisin Sambal, or Gochujang Honey. Served with Celery & Buttermilk Ranch or Blue Cheese",
+        "detail": "Choose from: Buffalo, Honey Garlic BBQ, Hoisin Sambal, or Gochujang Honey. Served with Celery & Buttermilk Ranch or Blue Cheese",
         "price": "12/19"
       },
       {
         "name": "Crispy cauliflower",
-        "detail": "<b>Choose from:<b> Buffalo, Honey Garlic BBQ, Hoisin Sambal, Gochujang Honey, Buttermilk Ranch, or Blue Cheese.",
+        "detail": "Choose from: Buffalo, Honey Garlic BBQ, Hoisin Sambal, Gochujang Honey, Buttermilk Ranch, or Blue Cheese.",
         "price": 9
       },
       {
@@ -115,13 +116,13 @@
       },
       {
         "name": "Add protein",
-        "detail": "Grilled Chipotle Chicken - 4\nPeppered Sirloin Steak - 5\nPork Belly - 5",
-        "price": ""
+        "detail": "Grilled Chipotle Chicken / Peppered Sirloin Steak / Pork Belly",
+        "price": "4/4/5"
       }
     ],
     "special": "(GF) = Gluten Free"
   },
-  "miniMe": {
+  "minime": {
     "category": "MINI ME",
     "items": [
       {
@@ -140,6 +141,6 @@
         "price": 6
       }
     ],
-    "special": "*No Modifications Please"
-  }
+    "special": "* No Modifications Please"
+    }
 }
