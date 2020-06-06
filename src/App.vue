@@ -45,6 +45,9 @@ export default {
   text-align: center;
   color: #2c3e50;
     background-color: #000000;
+    }
+body {
+    margin: 0;
 }
     *, *:before, *:after {
         box-sizing: border-box;

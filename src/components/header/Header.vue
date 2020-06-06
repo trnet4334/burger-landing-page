@@ -1,5 +1,5 @@
 <template>
-    <nav>
+    <nav :class="{'navbar--color': !isOnTheTop}">
         <div class="header__container">
             <div class="header__navigation">
                 <a href="#home" class="header__navigation--logo">
@@ -34,20 +34,43 @@
     </nav>
 </template>
 <script>
+export default {
+  data () {
+    return {
+      isOnTheTop: true,
+      topPosition: 0
+    }
+  },
+  mounted () {
+    window.addEventListener('scroll', this.onScroll)
+  },
+  destroyed () {
+    window.removeEventListener('scroll', this.onScroll)
+  },
+  methods: {
+    onScroll () {
+      const that = this
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
+      that.isOnTheTop = scrollTop === 0
+    }
+  }
+}
 </script>
 <style scoped lang="scss">
     nav {
         border-color: transparent;
-        padding: 2vh 1vw;
         position: fixed;
         width: 100vw;
         z-index: 200;
+        &.navbar--color {
+            background-color: rgba(25, 25, 25, 0.96);
+        }
     }
     .header__container {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 0 2vw;
+        padding: 2vh 2vw;
     }
     .header__links {
         & ul {
@@ -61,6 +84,12 @@
                     font-size: 1.2rem;
                     font-weight: 700;
                     color: #ad9545;
+                }
+                &:hover {
+                    & a {
+                        color: #ffffff;
+                    }
+                    transform: scale(1.4);
                 }
             }
         }

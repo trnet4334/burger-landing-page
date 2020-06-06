@@ -42,7 +42,7 @@
 <!--                                TODO: Add POST method of info to localStorage as demo need-->
                                 <form id="message" method="post">
                                     <p>
-                                        <input type="text" placeholder="Name" required/>
+                                        <input type="text" placeholder="Full Name" required/>
                                     </p>
                                     <p>
                                         <input type="text" placeholder="Phone Number" required/>

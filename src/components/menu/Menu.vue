@@ -19,7 +19,7 @@
             <div class="menu__content">
                 <div class="menu__content--title">
                     <h2>MENU</h2>
-                    <a href="#">
+                    <a href="javascript:;">
                         <font-awesome-icon icon="download"/>
                         <span>DOWNLOAD</span>
                     </a>
@@ -27,7 +27,7 @@
                 <div class="menu__content--main util__flex--row">
                     <div class="menu__product--category util__flex--column">
                         <div v-for="(item, index) in categories" :key="index">
-                            <a :data-id="item[0]" @click="switchCategory">
+                            <a href="javascript:;" :data-id="item[0]" @click="switchCategory">
                                 <span>{{item[1]}}</span>
                             </a>
                         </div>
@@ -188,6 +188,7 @@ export default {
             /*padding: 15px 0;*/
             margin: 15px 0;
             cursor: pointer;
+            text-decoration: none;
             & span {
                 color: #999999;
                 font-size: 1.1rem;
