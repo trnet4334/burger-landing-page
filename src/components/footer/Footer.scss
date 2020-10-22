@@ -1,0 +1,55 @@
+@import "src/styles/app";
+.footer {
+  justify-content: space-around;
+  align-items: center;
+  padding: 1vh 0 4vh 0;
+  background-color: transparent;
+}
+.footer__logo {
+  width: 250px;
+  height: 250px;
+  & img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+.footer__contact {
+  .footer__icons {
+    align-items: center;
+    margin-bottom: 30px;
+    & ul {
+      justify-content: space-between;
+      padding-left: 0;
+      list-style: none;
+    }
+    & span {
+      font-size: 1.1rem;
+      color: #ad9545;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+    .footer__icon {
+      margin: 0 8px;
+      color: #ad9545;
+      &:hover {
+        color: #ffffff;
+      }
+    }
+  }
+  & p {
+    color: #ffffff;
+  }
+}
+
+@include respond-below(phone) {
+  .footer {
+    flex-direction: column;
+  }
+  .footer__logo {
+    flex-basis: 100%;
+  }
+  .footer__contact {
+    flex-basis: 100%;
+  }
+}

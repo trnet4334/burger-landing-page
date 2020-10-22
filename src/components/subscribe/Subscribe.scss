@@ -1,0 +1,136 @@
+@import "src/styles/app";
+.subscribe__container {
+  position: relative;
+  padding: 10vh 10vw;
+}
+.subscribe__main {
+  width: 50vw;
+  max-width: 50vw;
+  background-color: #222222;
+  border-radius: 20px;
+  margin: 0 auto;
+  padding-bottom: 5vh;
+  position: relative;
+}
+
+.subscribe__main--title {
+  transform: translate3d(0, -35%, 0);
+  h2 {
+    color: #ad9545;
+    font-weight: 900;
+    font-size: 1.8rem;
+  }
+  .main__title--icon {
+    color: #ad9545;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+  }
+}
+.subscribe__main--form {
+  p {
+    color: #ffffff;
+    overflow-wrap: normal;
+    width: 70%;
+    padding-bottom: 20px;
+    font-size: 1.2rem;
+  }
+  input {
+    background-color: transparent;
+    border-color: transparent transparent #ffffff transparent;
+    margin-bottom: 7px;
+    font-size: 1.1rem;
+    font-family: inherit;
+    padding: 7.5px 5px;
+    width: 100%;
+    color: #ffffff;
+    font-weight: bold;
+    outline: none;
+    &::placeholder {
+      color: rgba(255, 255, 255, 0.75);
+    }
+  }
+  button {
+    background-color: transparent;
+    padding: 15px 30px;
+    margin-top: 12.5px;
+    border: 1px solid #ad9545;
+    cursor: pointer;
+    outline: none;
+    span {
+      font-weight: 700;
+      font-size: 1.2rem;
+      font-family: 'Roboto Slab', serif;
+      color: #ad9545;
+    }
+    &:hover {
+      background-color: #ad9545;
+      span {
+        color: #000000;
+      }
+    }
+  }
+}
+
+@include respond-below(phone) {
+  .subscribe__container {
+    padding: 10vh 2.5vw;
+  }
+  .subscribe__main {
+    width: 100%;
+    max-width: 100%;
+  }
+  .subscribe__main--title {
+    transform: translate3d(0, -30%, 0);
+  }
+  .subscribe__main--form {
+    p {
+      width: 95%;
+      text-align: center;
+    }
+    input {
+      width: 90%;
+    }
+  }
+}
+@include respond-between(phone, tablet) {
+  .subscribe__container {
+    padding: 10vh 7.5vw;
+  }
+  .subscribe__main {
+    width: 90%;
+    max-width: 100%;
+  }
+  .subscribe__main--form {
+    p {
+      width: 90%;
+      text-align: center;
+    }
+    input {
+      width: 95%;
+    }
+  }
+}
+@include respond-between(tablet, tablet-lg) {
+  .subscribe__main {
+    width: 90%;
+    max-width: 100%;
+  }
+  .subscribe__main--form {
+    p {
+      width: 80%;
+      text-align: center;
+    }
+  }
+}
+@include respond-between(tablet-lg, desktop) {
+  .subscribe__main {
+    width: 80%;
+    max-width: 100%;
+  }
+  .subscribe__main--form {
+    p {
+      text-align: center;
+    }
+  }
+}

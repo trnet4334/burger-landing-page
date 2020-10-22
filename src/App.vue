@@ -1,58 +1,37 @@
 <template>
-  <div id="app">
-      <Header/>
-      <Home/>
-      <Menu/>
-      <About/>
-      <Feed/>
-      <Contact/>
-      <Subscribe/>
-      <Footer/>
-  </div>
+    <main id="app">
+        <router-view/>
+    </main>
 </template>
-
 <script>
-import Header from './components/header/Header.vue'
-import Home from './components/home/Home.vue'
-import Menu from './components/menu/Menu.vue'
-import About from './components/about/About.vue'
-import Feed from './components/feed/Feed.vue'
-import Contact from './components/contact/Contact.vue'
-import Subscribe from './components/subscribe/Subscribe.vue'
-import Footer from './components/footer/Footer.vue'
-
-export default {
-  name: 'app',
-  components: {
-    Header,
-    Home,
-    Menu,
-    About,
-    Feed,
-    Contact,
-    Subscribe,
-    Footer
-  }
-}
 </script>
-
-<style>
-#app {
-  /*font-family: 'Avenir', Helvetica, Arial, sans-serif;*/
-    font-family: 'Roboto Slab', serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-    background-color: #000000;
-    }
+<style lang="scss">
+@import 'styles/app.scss';
 body {
     margin: 0;
-}
-    *, *:before, *:after {
-        box-sizing: border-box;
-        &:focus {
-            outline: none !important;
-        }
+    &::-webkit-scrollbar {
+        display: none;
     }
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+*, *:before, *:after {
+    box-sizing: border-box;
+    &:focus {
+        outline: none !important;
+    }
+}
+// Custom class for notification box in subscribe component
+.notification-class {
+    .el-notification__title {
+        font-family: 'Roboto Slab', serif;
+        font-size: 1.3rem;
+    }
+    .el-notification__content {
+        font-family: 'Roboto Slab', serif;
+        font-size: 1rem;
+        text-align: start;
+        word-break: break-all;
+    }
+}
 </style>

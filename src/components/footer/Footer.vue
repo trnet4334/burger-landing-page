@@ -1,12 +1,12 @@
 <template>
-    <footer>
+    <footer class="flex--row footer">
         <div class="footer__logo">
             <img src="../../assets/image/logo.png" alt="logo">
         </div>
         <div class="footer__contact">
-            <div class="footer__icons">
+            <div class="footer__icons flex--col">
                 <span>Connect with us</span>
-                <ul>
+                <ul class="flex--row">
                     <li>
                         <a href="#">
                             <font-awesome-icon :icon="['fab', 'facebook']" size="2x" class="footer__icon"/>
@@ -43,51 +43,4 @@ export default {
   }
 }
 </script>
-<style lang="scss" scoped>
-    footer {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        padding: 1vh 0 4vh 0;
-        background-color: transparent;
-    }
-    .footer__logo {
-        width: 250px;
-        height: 250px;
-        & img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-        }
-    }
-    .footer__contact {
-        .footer__icons {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-bottom: 30px;
-            & ul {
-                display: flex;
-                justify-content: space-between;
-                padding-left: 0;
-                list-style: none;
-            }
-            & span {
-                font-size: 1.1rem;
-                color: #ad9545;
-                font-weight: bold;
-                text-transform: uppercase;
-            }
-            .footer__icon {
-                margin: 0 8px;
-                color: #ad9545;
-                &:hover {
-                    color: #ffffff;
-                }
-            }
-        }
-        & p {
-            color: #ffffff;
-        }
-    }
-</style>
+<style src="./Footer.scss" lang="scss" scoped/>

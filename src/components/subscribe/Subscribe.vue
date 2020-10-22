@@ -2,8 +2,6 @@
     <section id="subscribe">
         <div class="subscribe__container">
             <div class="subscribe__main">
-<!--                TODO: Style a background behind the content-->
-<!--                <div class="subscribe__main&#45;&#45;background"/>-->
                 <div style="z-index: 2">
                     <div class="subscribe__main--title">
                         <div class="main__title--icon">
@@ -19,17 +17,19 @@
                         </div>
                         <h2>JOIN OUR MAILING LIST</h2>
                     </div>
-                    <div class="subscribe__main--form">
-                        <p>Subscribe our newsletter for
-                            the special events and promotions before we announce them anywhere else!</p>
+                    <div class="subscribe__main--form flex--col flex--center">
+                        <p>
+                            Subscribe our newsletter for the special events and promotions before we announce them anywhere else!
+                        </p>
                         <div>
                             <input
                                 type="email"
                                 placeholder="Email address"
                                 required
+                                v-model="email"
                                 name="EMAIL"
                             />
-                            <button>
+                            <button @click="onSubmit">
                                 <span>SUBSCRIBE</span>
                             </button>
                         </div>
@@ -39,83 +39,33 @@
         </div>
     </section>
 </template>
-<script></script>
-<style lang="scss" scoped>
-    .subscribe__container {
-        position: relative;
-        padding: 10vh 10vw;
-    }
-    .subscribe__main {
-        width: 50vw;
-        max-width: 50vw;
-        background-color: #222222;
-        border-radius: 20px;
-        margin: 0 auto;
-        padding-bottom: 5vh;
-        position: relative;
-    }
-    .subscribe__main--background {
-        position: absolute;
-        width: 120%;
-        background-color: #ad9545;
-        height: 80%;
-        z-index: 0;
-    }
-    .subscribe__main--title {
-        transform: translate3d(0, -35%, 0);
-        & h2 {
-            color: #ad9545;
-            font-weight: 900;
-            font-size: 1.8rem;
+<script>
+export default {
+    data () {
+        return {
+            email: ''
         }
-        .main__title--icon {
-            color: #ad9545;
-            display: flex;
-            align-items: flex-end;
-            justify-content: center;
-        }
-    }
-    .subscribe__main--form {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        & p {
-            color: #ffffff;
-            text-wrap: normal;
-            width: 70%;
-            padding-bottom: 20px;
-            font-size: 1.2rem;
-        }
-        & input {
-            background-color: transparent;
-            border-color: transparent transparent #ffffff transparent;
-            margin-bottom: 7px;
-            font-size: 1rem;
-            padding: 5px 0;
-            width: 100%;
-            &::placeholder {
-                color: #ffffff;
-            }
-        }
-        & button {
-            background-color: transparent;
-            padding: 15px 30px;
-            margin-top: 12.5px;
-            border: 1px solid #ad9545;
-            cursor: pointer;
-            & span {
-                font-weight: 700;
-                font-size: 1.2rem;
-                font-family: 'Roboto Slab', serif;
-                color: #ad9545;
-            }
-            &:hover {
-                background-color: #ad9545;
-                & span {
-                    color: #000000;
-                }
+    },
+    methods: {
+        async onSubmit () {
+            const regex = /(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/g
+            if (this.email === '' || regex.test(this.email) === false) {
+                alert('Please type in a correct email address.')
+            } else {
+                await window.sessionStorage.setItem('email', this.email)
+                await this.$notify({
+                    title: 'Success',
+                    message: 'Thank you for your subscription! We are looking forward to see you soon.',
+                    type: 'success',
+                    showClose: false,
+                    customClass: 'notification-class'
+                })
+                await setTimeout(() => {
+                    this.$router.go(0)
+                }, 2500)
             }
         }
     }
-</style>
+}
+</script>
+<style src="./Subscribe.scss" lang="scss" scoped/>

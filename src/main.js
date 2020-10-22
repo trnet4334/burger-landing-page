@@ -2,6 +2,7 @@ import Vue from 'vue'
 import App from './App.vue'
 import './registerServiceWorker'
 import './plugins/element.js'
+import router from '@/router'
 // import ElementUI from 'element-ui'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faFacebook, faInstagram, faYelp, faGoogle } from '@fortawesome/free-brands-svg-icons'
@@ -15,5 +16,6 @@ Vue.config.productionTip = false
 // Vue.use(ElementUI)
 
 new Vue({
+  router,
   render: h => h(App)
 }).$mount('#app')
